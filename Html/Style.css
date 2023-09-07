@@ -7,8 +7,6 @@
 }
 
 body{
-    /* padding: 0px;
-    margin: 0px; */
     background-color: #000;
     color: #fff;
     font-family: 'Poppins',sans-serif;
@@ -37,7 +35,7 @@ nav{
     text-align: center;
     justify-content: space-between;
     flex-wrap:wrap;
-    z-index: 10;
+    z-index: 2;
     border-bottom: 1px solid gray;
 }
 
@@ -45,6 +43,10 @@ nav .name{
     color: white;
     font-size: 3.5vw;
     font-weight: bold;
+}
+
+nav .name span{
+    color: brown;
 }
 
 nav ul li{
@@ -79,7 +81,7 @@ nav ul li a:hover{
     font-size: 2vw;
 }
 .text h1{
-    margin-top: 2vw;
+    margin-top: 1.5vw;
     font-size: 50px;
 }
 
@@ -87,17 +89,32 @@ nav ul li a:hover{
     color:brown;
 }
 
-.img{
+.img {
     background-color: rgb(30, 29, 29);
     border-radius: 50%;
-    height:450px;
+    height: 450px;
     width: 450px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 80px brown;
+}
 
+#myimg {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    transform: scale(2);
+    position: absolute;
+    top: 25vh;
+    left: 6vw;
 }
-#myimg{
-    height:530px;
-    width: 450px;
-}
+
 
 /* -------about------- */
 .about{
@@ -107,6 +124,7 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 2px solid gray;
 }
 
 .about .container{
@@ -131,11 +149,9 @@ nav ul li a:hover{
 
 .container .tab .tab-link{
     margin-right: 3vw;
-    margin-bottom: 3vh;
     font-size: 2vw;
     cursor: pointer;
     position: relative;
-    
 }
 
 .container .tab .tab-link::after{
@@ -151,6 +167,37 @@ nav ul li a:hover{
 .container .tab .tab-link.active::after{
     width: 100%;
 }
+
+.container .content{
+    width:100%;
+    justify-content: center;
+    margin-top: 2vh;
+    border-left:1px solid brown;
+    border-right:1px solid brown;
+    position: relative;
+}
+
+.container .content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px; /* Adjust the shadow width as needed */
+    height: 100%;
+    width: 50px; /* Adjust the shadow width as needed */
+    background: linear-gradient(to left, rgba(232, 18, 18, 0.3) 0%, transparent 100%);
+}
+
+/* Create a right shadow pseudo-element */
+.container .content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -50px; /* Adjust the shadow width as needed */
+    height: 100%;
+    width: 50px; /* Adjust the shadow width as needed */
+    background: linear-gradient(to right, rgba(199, 21, 21, 0.3) 0%, transparent 100%);
+}
+
 .container .tab-content ul li{
     text-align: left;
     list-style: none;
@@ -166,10 +213,10 @@ nav ul li a:hover{
 }
 .container .tab-content.active{
     display: block;
+    width:90%;
 }
 
 /* services */
-
 .services{
     /* padding: 80px 0px; */
     height: 100vh;
@@ -177,6 +224,7 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 2px solid gray;
 }
 .services .container{
     height: 70%;
@@ -225,37 +273,44 @@ nav ul li a:hover{
 /* my work  */
 .works{
     /* padding: 80px 0px; */
-    height: 85vh;
+    height: 110vh;
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 50vh;
+    border-top: 2px solid gray;
 }
 .works .container{
     height: 90%;
     width: 90%;
     text-align: center;
+    margin-top: 10vh;
 }
 
 .workList{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    column-gap: 6vw;
-    row-gap: 6vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: 4vw;
+    row-gap: 4vh;
+
 }
 .work{
     background-color: #fff;
     border-radius: 10px;
     position: relative;
-    width: 35vw;
-    height: 45vh;
+    width: 30vw;
+    height: 35vh;
     overflow: hidden;
+    border: 0.5px solid gray;
 }
 .work img{
-    width: 35vw;
-    height: 45vh;
+    width: 30vw;
+    height: 35vh;
     transition: transform 0.5s;
 }
+
 .layer{
     width: 100%;
     height: 0;
@@ -297,15 +352,165 @@ nav ul li a:hover{
 .work:hover .layer{
     height: 100%;
 }
-/* button  */
 
+/* button  */
 .btn button{
     height: 70px;
     width: 70px;
-    border-radius: 50%;
+    border-radius: 15%;
+    border: 1px solid gray;
     position: fixed;
     bottom: 30px;
     right: 30px; 
-    z-index: 10;
-    opacity: 60%;
+    z-index: 2;
+    opacity: 100%;
+    background-color: rgb(30, 29, 29);
+}
+
+.btn button i{
+    color: #e5e5e5;
+    font-size: 1.5vw;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    height: 70vh;
+    width: 40vw;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    background-color: gray;
+    padding: 20px;
+    border: 2px solid #000000;
+    box-shadow: 0 0 20px rgb(30, 29, 29);
+    z-index: 2;
+}
+
+.close {
+    position: absolute;
+    color: #000;
+    font-size: 40px;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+}
+
+.popup-content h2{
+    color: #000;
+    text-align: center;
+    
+}
+label {
+    color: #000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: rgb(220, 56, 56);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(166, 10, 10);
+}
+
+/* footer  */
+.footer{
+    height: 15vh;
+    width: 100%;
+    background-color: rgb(30, 29, 29);
+    border-top: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .container {
+    width: 40%;
+    text-align: center;
+}
+
+/* Styling for the social icons */
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: brown; /* Change the color on hover (adjust as needed) */
+}
+
+.copyright {
+    margin-top: 3vh;
+    font-size: 14px;
+}
+
+.copyright span {
+    font-weight: bold;
+}
+
+.credits span{
+    font-weight: bolder;
+}
+
+.typed {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 0.25em; /* Adjust spacing */
+    border-right: 2px solid white; /* Typing cursor effect */
+    animation: typing 2s steps(20, end), blink-caret 0.5s step-end infinite;
+}
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
 }
