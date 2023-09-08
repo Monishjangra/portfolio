@@ -4,7 +4,9 @@
     box-sizing: border-box;
 
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     background-color: #000;
     color: #fff;
@@ -49,6 +51,10 @@ nav {
     border-bottom: 1px solid gray;
 }
 
+nav .fas{
+    display: none;
+}
+
 nav .name {
     color: white;
     font-size: 3.5vw;
@@ -68,7 +74,7 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: 15px;
     font-weight: bold;
     transition: 0.5s;
 }
@@ -95,7 +101,7 @@ nav ul li a:hover {
 
 .text h1 {
     margin-top: 1.5vw;
-    font-size: 50px;
+    font-size: 4vw;
 }
 
 .text h1 span {
@@ -258,9 +264,11 @@ nav ul li a:hover {
 .servicesList {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    column-gap: 6vw;
-    row-gap: 6vh;
+    display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 4vw;
+    row-gap: 4vh;
 }
 
 .servicesList div {
@@ -427,9 +435,9 @@ nav ul li a:hover {
     left: 50%;
     border-radius: 10px;
     transform: translate(-50%, -50%);
-    background-color: gray;
+    background-color: rgb(63, 63, 63);
     padding: 20px;
-    border: 2px solid #000000;
+    /* border: 2px solid #000000; */
     box-shadow: 0 0 20px rgb(30, 29, 29);
     z-index: 2;
 }
@@ -452,7 +460,7 @@ nav ul li a:hover {
 label {
     color: #000;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 input[type="text"],
@@ -461,8 +469,11 @@ textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    background: gray;
+    outline: none;
+    border: 0;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 input[type="submit"] {
@@ -480,7 +491,7 @@ input[type="submit"]:hover {
 
 /* footer  */
 .footer {
-    height: 15vh;
+    height: 18vh;
     width: 100%;
     background-color: rgb(30, 29, 29);
     border-top: 1px solid gray;
@@ -492,13 +503,13 @@ input[type="submit"]:hover {
 .footer .container {
     width: 40%;
     text-align: center;
+
 }
 
-/* Styling for the social icons */
 .social-icons {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-bottom: 2vh;
     display: flex;
     gap: 1.5vw;
     justify-content: center;
@@ -509,17 +520,19 @@ input[type="submit"]:hover {
     text-decoration: none;
     color: #fff;
     font-size: 24px;
-    transition: color 0.3s ease;
+    display: inline-block;
+    transition: transform 0.5s, color 0.5s ease;
 }
 
 .social-icons a:hover {
     color: brown;
+    transform: translateY(-5px);
     /* Change the color on hover (adjust as needed) */
 }
 
 .copyright {
-    margin-top: 3vh;
-    font-size: 14px;
+    margin-top: 2vh;
+    font-size: 12px;
 }
 
 .copyright span {
@@ -530,31 +543,44 @@ input[type="submit"]:hover {
     font-weight: bolder;
 }
 
-.typed {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    margin-right: 0.25em;
-    /* Adjust spacing */
-    border-right: 2px solid white;
-    /* Typing cursor effect */
-    animation: typing 2s steps(20, end), blink-caret 0.5s step-end infinite;
-}
+/* for mobile responsive */
 
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent;
+@media (max-width: 480px) {
+    .content .img{
+        display: none;
     }
 
-    50% {
-        border-color: white;
+    nav .fas{
+        display: block;
+        font-size: 20px;
+        right: 20px;
     }
-}
-
-@keyframes typing {
-    from {
-        width: 0;
+    nav ul{
+        background: brown;
+        position: fixed;
+        top: 0;
+        right: -120px;
+        width: 120px;
+        height: auto;
+        padding: 50px 0;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 10px;
+    }
+    nav ul li a:hover {
+        color: black;
+        position: relative;
+        left: 0%;
+        height: 0px;
+        width: 100%;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
     }
 }

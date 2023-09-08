@@ -15,15 +15,17 @@
   <body>
     <!-- Home section  -->
     <div class="home" id="home">
-      <nav>
+      <nav id="contentMenu">
         <div class="name"><span>P</span>ortfolio.</div>
-        <ul>
+        <ul id="sideMenu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#project">Projects</a></li>
           <li><a href="myResume.pdf" target="_blank">Resume</a></li>
+          <i class="fas fa-times" onclick="closeMenu()"></i>
         </ul>
+        <i class="fas fa-bars" onclick="openMenu()"></i>
       </nav>
       <div class="header">
         <div class="content">
@@ -183,13 +185,8 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required />
 
-            <label for="description">Description:</label><br />
-            <textarea
-              id="description"
-              name="description"
-              rows="4"
-              required
-            ></textarea>
+            <label for="message">Your message:</label><br />
+            <textarea id="message" name="message" rows="3" required></textarea>
 
             <input type="submit" value="Submit" />
           </form>
@@ -228,8 +225,11 @@
             ></a>
           </li>
         </ul>
+        <div class="mail">
+          <i class="fas fa-envelope"> </i> monishjangra2000@gmail.com
+        </div>
         <div class="copyright">
-          © Copyright <strong><span>MyResume</span></strong
+          Copyright ©<strong><span> Monish</span></strong
           >. All Rights Reserved
         </div>
         <div class="credits">Designed by <span>Monish</span></div>
