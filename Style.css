@@ -266,8 +266,8 @@ nav ul li a:hover {
 .servicesList div {
     background-color: rgb(30, 29, 29);
     padding: 15px;
-    height: 300px;
-    width: 450px;
+    width: 380px;
+    height: 280px;
     font-size: 12px;
     font-weight: 300;
     text-align: left;
@@ -281,20 +281,20 @@ nav ul li a:hover {
 }
 
 .servicesList div i {
-    font-size: 4vw;
-    margin-bottom: 3vh;
+    font-size: 40px;
+    margin-bottom: 40px;
 }
 
 .servicesList div h2 {
-    font-size: 3vw;
+    font-size: 30px;
     font-weight: 500;
-    margin-bottom: 6vh;
+    margin-bottom: 30px;
 }
 
 .servicesList div a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.2vw;
+    font-size: 12px;
     margin-top: 4vh;
     display: inline-block;
 }
@@ -404,7 +404,7 @@ nav ul li a:hover {
 
 .btn button i {
     color: #e5e5e5;
-    font-size: 1.5vw;
+    font-size: 20px;
 }
 
 .overlay {
