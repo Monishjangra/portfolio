@@ -30,19 +30,15 @@ body::-webkit-scrollbar-thumb{
     background-position: center;
 }
 
-.header {
-    padding: 10px 5%;
-
-}
 
 nav {
-    padding: 10px 5%;
+    padding: 10px 2%;
     height: 10vh;
     width: 100%;
     background-color: rgb(30, 29, 29);
     position: fixed;
     display: flex;
-    text-align: center;
+    align-content: center;
     justify-content: space-between;
     flex-wrap: wrap;
     z-index: 2;
@@ -51,7 +47,7 @@ nav {
 
 nav .name {
     color: white;
-    font-size: 3.5vw;
+    font-size: 3em;
     font-weight: bold;
 }
 
@@ -59,10 +55,11 @@ nav .name span {
     color: brown;
 }
 
+
 nav ul li {
-    display: inline-block;
+    display: inline-flex;
     list-style: none;
-    margin: 10px 8px;
+    padding: 13px;
 }
 
 nav ul li a {
@@ -82,19 +79,21 @@ nav ul li a:hover {
 }
 
 .content {
-    margin-top: 10vh;
-    display: flex;
     position: relative;
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 .text {
-    margin-top: 15%;
-    font-size: 2vw;
+    flex: 1;
+    font-size: 2em;
+    margin-top: 20vh;
 }
 
 .text h1 {
-    margin-top: 1.5vw;
+    margin-top: 1.5vh;
     font-size: 50px;
 }
 
@@ -105,9 +104,9 @@ nav ul li a:hover {
 .img {
     background-color: rgb(30, 29, 29);
     border-radius: 50%;
-    height: 450px;
+    height: 450px; 
     width: 450px;
-    margin-top: 30px;
+    margin-top: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,15 +118,13 @@ nav ul li a:hover {
 #myimg {
     max-width: 100%;
     max-height: 100%;
-    width: auto;
     height: auto;
-    display: block;
+    display:block;
     transform: scale(2);
     position: absolute;
-    top: 25vh;
+    top: 20vh;
     left: 6vw;
 }
-
 
 /* -------about------- */
 .about {
@@ -144,28 +141,30 @@ nav ul li a:hover {
     height: 70%;
     width: 70%;
     text-align: center;
+    padding: 20px;
 }
 
 .container h1 {
-    font-size: 4vw;
+    font-size: 4em;
     font-weight: bolder;
     margin-bottom: 5vh;
 }
 
 .container p {
-    font-size: 1.6vw;
+    font-size: 1.5em;
     font-weight: bolder;
+    padding: 10px 30px;
 }
 
 .container .tab {
     display: flex;
     margin: 2vw 0vw;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .container .tab .tab-link {
     margin-right: 3vw;
-    font-size: 2vw;
+    font-size: 2em;
     cursor: pointer;
     position: relative;
 }
@@ -221,12 +220,12 @@ nav ul li a:hover {
     text-align: left;
     list-style: none;
     margin: 2vh 0;
-    font-size: 1.4vw;
+    font-size: 1.2em;
 }
 
 .container .tab-content ul li span {
     color: brown;
-    font-size: 2vw;
+    font-size: 1.8em;
 }
 
 .container .tab-content {
@@ -265,14 +264,14 @@ nav ul li a:hover {
 
 .servicesList div {
     background-color: rgb(30, 29, 29);
-    padding: 15px;
-    width: 380px;
+    padding: 20px 20px;
+    width: 400px;
     height: 280px;
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 1em;
+    /* font-weight: 200; */
     text-align: left;
     border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
+    transition: all ease-in-out 0.5s;
 }
 
 .servicesList div:hover {
@@ -281,20 +280,28 @@ nav ul li a:hover {
 }
 
 .servicesList div i {
-    font-size: 40px;
-    margin-bottom: 40px;
+    font-size: 4em;
+    margin-bottom: 20px;
 }
 
 .servicesList div h2 {
-    font-size: 30px;
+    font-size: 3em;
     font-weight: 500;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
+
+.servicesList div p {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
 
 .servicesList div a {
     text-decoration: none;
     color: #fff;
-    font-size: 12px;
+    font-size: 1em;
     margin-top: 4vh;
     display: inline-block;
 }
@@ -357,7 +364,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: end;
     text-align: center;
-    font-size: 1.4vw;
+    font-size: 1.4em;
     transition: height 0.5s;
 }
 
@@ -369,19 +376,19 @@ nav ul li a:hover {
 .layer a {
     color: brown;
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: 1em;
     line-height: 6vh;
     background: #fff;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    align-items: center;
+    align-content: center;
     margin-bottom: 2vh;
 
 }
 
 .work:hover img {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .work:hover .layer {
@@ -404,24 +411,12 @@ nav ul li a:hover {
 
 .btn button i {
     color: #e5e5e5;
-    font-size: 20px;
-}
-
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
+    font-size: 2em;
 }
 
 .popup {
     display: none;
     position: fixed;
-    height: 70vh;
     width: 40vw;
     top: 50%;
     left: 50%;
@@ -437,8 +432,8 @@ nav ul li a:hover {
 .close {
     position: absolute;
     color: #000;
-    font-size: 40px;
-    top: 8px;
+    font-size: 4em;
+    top: 0;
     right: 12px;
     cursor: pointer;
 }
@@ -446,13 +441,16 @@ nav ul li a:hover {
 .popup-content h2 {
     color: #000;
     text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
 
 }
 
 label {
     color: #000;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
+    font-size: 1.5em;
 }
 
 input[type="text"],
@@ -514,12 +512,12 @@ input[type="submit"]:hover {
 
 .social-icons a:hover {
     color: brown;
-    /* Change the color on hover (adjust as needed) */
+    transform: translateY(-5px);
 }
 
 .copyright {
-    margin-top: 3vh;
-    font-size: 14px;
+    margin-top: 2vh;
+    font-size: 1em;
 }
 
 .copyright span {
@@ -541,20 +539,58 @@ input[type="submit"]:hover {
     animation: typing 2s steps(20, end), blink-caret 0.5s step-end infinite;
 }
 
-@keyframes blink-caret {
+/* for mobile responsive */
 
-    from,
-    to {
-        border-color: transparent;
+@media (max-width: 480px) {
+    .content .img{
+        display: none;
     }
 
-    50% {
-        border-color: white;
+    nav .fas{
+        display: block;
+        font-size: 2em;
+        /* right: 20px; */
     }
+nav ul {
+    background: brown;
+    position: fixed;
+    top: -100%; 
+    width: 100%;
+    height: auto;
+    padding-top: 25px; 
+    z-index: 2;
+    transition: top 0.5s;
+    text-align: center; 
 }
 
-@keyframes typing {
-    from {
-        width: 0;
+nav ul li {
+    display:inline-block;
+    padding: 8px;
+    margin: 10px 0; 
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block; 
+    padding: 10px 0;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    color: black;
+    position: relative;
+    left: 0%;
+    height: 0px;
+    width: 100%;
+}
+
+    nav ul .fas{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
     }
 }

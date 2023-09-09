@@ -42,39 +42,14 @@ function closePopup() {
 togglePopupBtn.addEventListener('click', togglePopup);
 closePopupBtn.addEventListener('click', closePopup);
 
+        // Open the sidebar when the "Open Sidebar" button is clicked
+        function openMenu() {
+            sideMenu.style.top = '0';
+            // content.style.marginLeft = '';
+        };
 
-// var typedText = document.getElementById("typedText");
-// var typedItems = ["Designer", "Developer"];
-// var currentItemIndex = 0;
-// var currentTextIndex = 0;
-// var isTyping = true;
-
-// function animateText() {
-//     var currentText = typedItems[currentItemIndex];
-    
-//     if (isTyping) {
-//         typedText.textContent = currentText.slice(0, currentTextIndex);
-//         currentTextIndex++;
-
-//         if (currentTextIndex > currentText.length) {
-//             isTyping = false;
-//             setTimeout(function () {
-//                 isTyping = true;
-//                 currentTextIndex = 0;
-//                 currentItemIndex = (currentItemIndex + 1) % typedItems.length;
-//             }, 1000); // Pause for 1 second after typing
-//         }
-//     } else {
-//         typedText.textContent = currentText.slice(0, currentTextIndex);
-//         currentTextIndex--;
-
-//         if (currentTextIndex < 0) {
-//             isTyping = true;
-//             setTimeout(function () {
-//                 isTyping = false;
-//             }, 1000); // Pause for 1 second after erasing
-//         }
-//     }
-// }
-
-// setInterval(animateText, 100);
+        // Close the sidebar when the close button is clicked
+        function closeMenu() {
+          sideMenu.style.top = '-200px';
+            // content.style.marginLeft = '0';
+        };
