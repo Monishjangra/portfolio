@@ -10,7 +10,7 @@ html{
 body {
     background-color: #000;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
+    font-family: roboto;
     position: relative;
 }
 
@@ -24,6 +24,9 @@ body::-webkit-scrollbar-thumb{
     border-radius: 15px;
 }
 
+.context{
+    box-sizing: border-box;
+}
 .home {
     height: 100vh;
     width: 100%;
@@ -37,27 +40,27 @@ body::-webkit-scrollbar-thumb{
 
 }
 
+nav .fas{
+    display: none;
+}
+
 nav {
-    padding: 10px 5%;
+    padding: 10px 2%;
     height: 10vh;
     width: 100%;
     background-color: rgb(30, 29, 29);
     position: fixed;
     display: flex;
-    text-align: center;
+    align-content: center;
     justify-content: space-between;
     flex-wrap: wrap;
     z-index: 2;
     border-bottom: 1px solid gray;
 }
 
-nav .fas{
-    display: none;
-}
-
 nav .name {
     color: white;
-    font-size: 3.5vw;
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -101,7 +104,7 @@ nav ul li a:hover {
 
 .text h1 {
     margin-top: 1.5vw;
-    font-size: 4vw;
+    font-size: 40px;
 }
 
 .text h1 span {
@@ -153,13 +156,13 @@ nav ul li a:hover {
 }
 
 .container h1 {
-    font-size: 4vw;
+    font-size: 40px;
     font-weight: bolder;
     margin-bottom: 5vh;
 }
 
 .container p {
-    font-size: 1.6vw;
+    font-size: 20px;
     font-weight: bolder;
 }
 
@@ -256,14 +259,15 @@ nav ul li a:hover {
 }
 
 .services .container {
-    height: 70%;
-    width: 80%;
+    margin-top: 20vh;
+    height: 90%;
+    width: 100%;
     text-align: center;
 }
 
 .servicesList {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -274,8 +278,8 @@ nav ul li a:hover {
 .servicesList div {
     background-color: rgb(30, 29, 29);
     padding: 15px;
-    width: 380px;
-    height: 280px;
+    width: 35%;
+    height: 50vh;
     font-size: 12px;
     font-weight: 300;
     text-align: left;
@@ -290,13 +294,13 @@ nav ul li a:hover {
 
 .servicesList div i {
     font-size: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 4vh;
 }
 
 .servicesList div h2 {
     font-size: 30px;
     font-weight: 500;
-    margin-bottom: 30px;
+    margin-bottom: 3vh;
 }
 
 .servicesList div a {
@@ -313,6 +317,7 @@ nav ul li a:hover {
     height: 110vh;
     width: 100%;
     display: flex;
+    overflow: hidden;
     justify-content: center;
     border-top: 2px solid gray;
 }
@@ -346,8 +351,8 @@ nav ul li a:hover {
 }
 
 .work img {
-    width: 380px;
-    height: 210px;
+    width: 100%;
+    height: 100%;
     transition: transform 0.5s;
 }
 
@@ -380,7 +385,7 @@ nav ul li a:hover {
     font-size: 1.5vw;
     line-height: 6vh;
     background: #fff;
-    width: 40px;
+    width: 40PX;
     height: 40px;
     border-radius: 50%;
     align-items: center;
@@ -429,8 +434,8 @@ nav ul li a:hover {
 .popup {
     display: none;
     position: fixed;
-    height: 70vh;
-    width: 40vw;
+    height: 65%;
+    width: 80%;
     top: 50%;
     left: 50%;
     border-radius: 10px;
@@ -460,7 +465,7 @@ nav ul li a:hover {
 label {
     color: #000;
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 0.5vh;
 }
 
 input[type="text"],
@@ -468,7 +473,7 @@ input[type="email"],
 textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 1vh;
     background: gray;
     outline: none;
     border: 0;
@@ -495,13 +500,14 @@ input[type="submit"]:hover {
     width: 100%;
     background-color: rgb(30, 29, 29);
     border-top: 1px solid gray;
-    display: flex;
+    display:flex;
+    position:absolute;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
 }
 
 .footer .container {
-    width: 40%;
     text-align: center;
 
 }
@@ -509,7 +515,7 @@ input[type="submit"]:hover {
 .social-icons {
     list-style: none;
     padding: 0;
-    margin-bottom: 2vh;
+    margin-bottom: 1.2vh;
     display: flex;
     gap: 1.5vw;
     justify-content: center;
@@ -519,7 +525,7 @@ input[type="submit"]:hover {
 .social-icons a {
     text-decoration: none;
     color: #fff;
-    font-size: 24px;
+    font-size: 1.5em;
     display: inline-block;
     transition: transform 0.5s, color 0.5s ease;
 }
@@ -527,12 +533,11 @@ input[type="submit"]:hover {
 .social-icons a:hover {
     color: brown;
     transform: translateY(-5px);
-    /* Change the color on hover (adjust as needed) */
 }
 
 .copyright {
     margin-top: 2vh;
-    font-size: 12px;
+    font-size: 1em;
 }
 
 .copyright span {
@@ -546,41 +551,123 @@ input[type="submit"]:hover {
 /* for mobile responsive */
 
 @media (max-width: 480px) {
-    .content .img{
-        display: none;
+
+    h1{
+        font-size: 10px;
     }
 
     nav .fas{
         display: block;
         font-size: 20px;
-        right: 20px;
+        margin-right: 10px;
+        align-self: center;
     }
-    nav ul{
+
+    nav ul {
         background: brown;
-        position: fixed;
-        top: 0;
-        right: -120px;
-        width: 120px;
+        position:fixed;
+        margin: -6px;
+        top: -100%; 
+        width: 100%;
         height: auto;
-        padding: 50px 0;
+        padding-top: 25px; 
         z-index: 2;
-        transition: right 0.5s;
+        transition: top 0.5s;
+        text-align: center; 
     }
-    nav ul li{
+    
+    nav ul li {
+        display:inline-flex;
+        padding: 3px;
+        margin: 10px 0; 
+    }
+    
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.8em;
+        font-weight: bold;
         display: block;
-        margin: 10px;
+        transition: 0.5s;
     }
+
     nav ul li a:hover {
         color: black;
         position: relative;
         left: 0%;
-        height: 0px;
         width: 100%;
+        height: 0px;
     }
-    nav ul .fas{
-        position: absolute;
-        top: 20px;
+
+    .content {
+        flex-direction: column-reverse;
+        padding: 20px 0px 20px 25%;
+    }
+
+    .content .text{
+        margin-top: 20vh;
+        font-size: 0.8em;
+    }
+
+    .content .text h1{
+        font-size: 1.5em;
+    }
+    
+    .img {
+        height: 150px;
+        width: 150px;
+    }
+
+    #myimg {
+        top: 10vh;
+        left: 7vw;
+    }
+    
+    .container p{
+        font-size: 10px;
+    }
+
+    .servicesList div {
+        padding: 15px;
+        width: 80%;
+        height: auto;
+        font-size: 12px;
+    }
+    .servicesList div p{
+        font-size: 1em;
+    }
+
+    .work {
+        width: 250px;
+        height: 120px;
+    }
+
+    .btn button {
+        height: 25px;
+        width: 25px;
+        bottom: 20px;
         right: 20px;
-        cursor: pointer;
     }
+    
+    .btn button i {
+        font-size: 15px;
+    }
+    
+    .social-icons {
+        margin-bottom: 1vh;
+    }
+
+    .social-icons a {
+        font-size: 0.8em;
+    }
+
+    .mail{
+        font-size: 0.9em;
+    }
+
+    .copyright {
+        margin-top: 1vh;
+        font-size: 0.8em;
+    }
+
 }

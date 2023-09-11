@@ -13,226 +13,243 @@
     />
   </head>
   <body>
-    <!-- Home section  -->
-    <div class="home" id="home">
-      <nav id="contentMenu">
-        <div class="name"><span>P</span>ortfolio.</div>
-        <ul id="sideMenu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#project">Projects</a></li>
-          <li><a href="myResume.pdf" target="_blank">Resume</a></li>
-          <i class="fas fa-times" onclick="closeMenu()"></i>
-        </ul>
-        <i class="fas fa-bars" onclick="openMenu()"></i>
-      </nav>
-      <div class="header">
-        <div class="content">
-          <div class="text">
-            <p>
-              Full-Stack developer
-              <!-- <span class="typed" id="typedText"></span> -->
-            </p>
-            <h1>Hi, I'm <span>Monish</span> <br />from Rohtak, Haryana.</h1>
-          </div>
-          <div class="img">
-            <img id="myimg" src=" PXL_20230720_121636398~3.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- about section -->
-    <div class="about" id="about">
-      <div class="container">
-        <h1>About Me</h1>
-        <div class="about-content">
-          <p>
-            To succeed in an environment of growth and excellence and self
-            development and help me achieve personal as well as organization
-            goals.
-          </p>
-          <div class="tab">
-            <p class="tab-link active" onclick="opentab('skills')">Skills</p>
-            <p class="tab-link" onclick="opentab('experience')">Experience</p>
-            <p class="tab-link" onclick="opentab('education')">Education</p>
-          </div>
+    <nav id="contentMenu">
+      <div class="name"><span>P</span>ortfolio.</div>
+      <ul id="sideMenu">
+        <li><a href="#home" onclick="closeMenu()">Home</a></li>
+        <li><a href="#about" onclick="closeMenu()">About</a></li>
+        <li><a href="#services" onclick="closeMenu()">Services</a></li>
+        <li><a href="#project" onclick="closeMenu()">Projects</a></li>
+        <li>
+          <a href="myResume.pdf" onclick="closeMenu()" target="_blank"
+            >Resume</a
+          >
+        </li>
+        <!-- <i class="fas fa-times" onclick="closeMenu()"></i> -->
+      </ul>
+      <i class="fas fa-bars" onclick="openMenu()"></i>
+    </nav>
+    <div class="context" onclick="closeMenu()">
+      <!-- Home section  -->
+      <div class="home" id="home">
+        <div class="header">
           <div class="content">
-            <div class="tab-content active" id="skills">
-              <ul>
-                <li>
-                  <span>full stack developer</span><br />Building backend and
-                  frontend
-                </li>
-                <li><span>Java</span><br />Basic Java</li>
-                <li>
-                  <span>Spring framework</span><br />SpringBoot, Spring Security
-                </li>
-              </ul>
+            <div class="text">
+              <p>
+                Full-Stack developer
+                <!-- <span class="typed" id="typedText"></span> -->
+              </p>
+              <h1>Hi, I'm <span>Monish</span> <br />from Rohtak, Haryana.</h1>
             </div>
-            <div class="tab-content" id="experience">
-              <ul>
-                <li style="text-align: center">
-                  <span>Software Enginer at Msys Technologies, Pune</span
-                  ><br />2022-Present
-                </li>
-              </ul>
-            </div>
-            <div class="tab-content" id="education">
-              <ul>
-                <li style="text-align: right">
-                  <span>Computer Science Engineering from UPES, Dehradun</span
-                  ><br />
-                  2018-2022
-                </li>
-                <li style="text-align: right">
-                  <span>12th from Shiksha Bharti Sr. Sec. School, Rohtak</span
-                  ><br />2017-2018
-                </li>
-                <li style="text-align: right">
-                  <span>10th from Shiksha Bharti Sr. Sec. School, Rohtak</span
-                  ><br />2015-2016
-                </li>
-              </ul>
+            <div class="img">
+              <img id="myimg" src=" PXL_20230720_121636398~3.png" alt="" />
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- services -->
-    <div class="services" id="services">
-      <div class="container">
-        <h1>Services</h1>
-        <div class="servicesList">
-          <div>
-            <i class="fas fa-code"></i>
-            <h2>Backend</h2>
+      <!-- about section -->
+      <div class="about" id="about">
+        <div class="container">
+          <h1>About Me</h1>
+          <div class="about-content">
             <p>
-              In backend, I'm using Java, SpringBoot framework, Spring security,
-              DBMS.
+              To succeed in an environment of growth and excellence and self
+              development and help me achieve personal as well as organization
+              goals.
             </p>
-            <!-- <a href="">Checkout my project</a> -->
-          </div>
-          <div>
-            <i class="fas fa-crop-alt"></i>
-            <h2>Frontend</h2>
-            <p>
-              In frontend, I'm using HTML, CSS, JavaScript and learning Angular.
-            </p>
-            <!-- <a href="">Checkout my project</a> -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- my work -->
-    <div class="works" id="project">
-      <div class="container">
-        <h1>My projects</h1>
-        <div class="workList">
-          <div class="work">
-            <img src="shopApp.PNG" alt="" />
-            <div class="layer">
-              <a
-                href="https://github.com/Monishjangra/shopping-application"
-                target="_blank"
-              >
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <h2>Shoping Application</h2>
+            <div class="tab">
+              <p class="tab-link active" onclick="opentab('skills')">Skills</p>
+              <p class="tab-link" onclick="opentab('experience')">Experience</p>
+              <p class="tab-link" onclick="opentab('education')">Education</p>
             </div>
-          </div>
-          <!-- 2nd work  -->
-          <div class="work">
-            <img src="list.PNG" alt="" />
-            <div class="layer">
-              <a
-                href="https://github.com/Monishjangra/list-Manipulation"
-                target="_blank"
-              >
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <h2>list Manipulation</h2>
-            </div>
-          </div>
-          <div class="work">
-            <img src="dataManager.PNG" alt="" />
-            <div class="layer">
-              <a
-                href="https://github.com/Monishjangra/Data-manager"
-                target="_blank"
-              >
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <h2>Data Manager</h2>
+            <div class="content">
+              <div class="tab-content active" id="skills">
+                <ul>
+                  <li>
+                    <span>full stack developer</span><br />Building backend and
+                    frontend
+                  </li>
+                  <li><span>Java</span><br />Basic Java</li>
+                  <li>
+                    <span>Spring framework</span><br />SpringBoot, Spring
+                    Security
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="experience">
+                <ul>
+                  <li style="text-align: center">
+                    <span>Software Enginer at Msys Technologies, Pune</span
+                    ><br />2022-Present
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="education">
+                <ul>
+                  <li style="text-align: right">
+                    <span>Computer Science Engineering from UPES, Dehradun</span
+                    ><br />
+                    2018-2022
+                  </li>
+                  <li style="text-align: right">
+                    <span>12th from Shiksha Bharti Sr. Sec. School, Rohtak</span
+                    ><br />2017-2018
+                  </li>
+                  <li style="text-align: right">
+                    <span>10th from Shiksha Bharti Sr. Sec. School, Rohtak</span
+                    ><br />2015-2016
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- button  -->
-    <div class="btn">
-      <button type="button" id="togglePopupBtn">
-        <i class="fas fa-phone"></i>
-      </button>
-      <div class="popup" id="popupContainer">
-        <div class="popup-content">
-          <span class="close" id="closePopupBtn">&times;</span>
-          <h2>Contact Me</h2>
-          <form action="submit.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-
-            <label for="message">Your message:</label><br />
-            <textarea id="message" name="message" rows="3" required></textarea>
-
-            <input type="submit" value="Submit" />
-          </form>
+      <!-- services -->
+      <div class="services" id="services">
+        <div class="container">
+          <h1>Services</h1>
+          <div class="servicesList">
+            <div>
+              <i class="fas fa-code"></i>
+              <h2>Backend</h2>
+              <p>
+                In backend, I'm using Java, SpringBoot framework, Spring
+                security, DBMS.
+              </p>
+              <!-- <a href="">Checkout my project</a> -->
+            </div>
+            <div>
+              <i class="fas fa-crop-alt"></i>
+              <h2>Frontend</h2>
+              <p>
+                In frontend, I'm using HTML, CSS, JavaScript and learning
+                Angular.
+              </p>
+              <!-- <a href="">Checkout my project</a> -->
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- footer  -->
-    <div class="footer">
-      <div class="container">
-        <ul class="social-icons">
-          <li>
-            <a
-              href="https://instagram.com/monish.2410?igshid=MmU2YjMzNjRlOQ=="
-              target="_blank"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </li>
-          <li>
-            <a href="myResume.pdf" download><i class="fas fa-download"></i></a>
-          </li>
-          <li>
-            <a href="https://join.skype.com/invite/tyqAiIiM8PK9" target="_blank"
-              ><i class="fab fa-skype"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/monish-jangra-419795145/"
-              target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://github.com/Monishjangra" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-          </li>
-        </ul>
-        <div class="mail">
-          <i class="fas fa-envelope"> </i> monishjangra2000@gmail.com
+      <!-- my work -->
+      <div class="works" id="project">
+        <div class="container">
+          <h1>My projects</h1>
+          <div class="workList">
+            <div class="work">
+              <img src="shopApp.PNG" alt="" />
+              <div class="layer">
+                <a
+                  href="https://github.com/Monishjangra/shopping-application"
+                  target="_blank"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <h2>Shoping Application</h2>
+              </div>
+            </div>
+            <!-- 2nd work  -->
+            <div class="work">
+              <img src="list.PNG" alt="" />
+              <div class="layer">
+                <a
+                  href="https://github.com/Monishjangra/list-Manipulation"
+                  target="_blank"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <h2>list Manipulation</h2>
+              </div>
+            </div>
+            <div class="work">
+              <img src="dataManager.PNG" alt="" />
+              <div class="layer">
+                <a
+                  href="https://github.com/Monishjangra/Data-manager"
+                  target="_blank"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <h2>Data Manager</h2>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="copyright">
-          Copyright ©<strong><span> Monish</span></strong
-          >. All Rights Reserved
+      </div>
+      <!-- button  -->
+      <div class="btn">
+        <button type="button" id="togglePopupBtn">
+          <i class="fas fa-phone"></i>
+        </button>
+        <div class="popup" id="popupContainer">
+          <div class="popup-content">
+            <span class="close" id="closePopupBtn">&times;</span>
+            <h2>Contact Me</h2>
+            <form action="submit.php" method="post">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="message">Your message:</label><br />
+              <textarea
+                id="message"
+                name="message"
+                rows="3"
+                required
+              ></textarea>
+
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
         </div>
-        <div class="credits">Designed by <span>Monish</span></div>
+      </div>
+      <!-- footer  -->
+      <div class="footer">
+        <div class="container">
+          <ul class="social-icons">
+            <li>
+              <a
+                href="https://instagram.com/monish.2410?igshid=MmU2YjMzNjRlOQ=="
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="myResume.pdf" download
+                ><i class="fas fa-download"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://join.skype.com/invite/tyqAiIiM8PK9"
+                target="_blank"
+                ><i class="fab fa-skype"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/monish-jangra-419795145/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/Monishjangra" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+          </ul>
+          <div class="mail">
+            <i class="fas fa-envelope"> </i> monishjangra2000@gmail.com
+          </div>
+          <div class="copyright">
+            Copyright ©<strong><span> Monish</span></strong
+            >. All Rights Reserved
+          </div>
+          <div class="credits">Designed by <span>Monish</span></div>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>

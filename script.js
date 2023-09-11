@@ -39,17 +39,13 @@ function closePopup() {
     document.body.removeChild(overlay);
 }
 
+
 togglePopupBtn.addEventListener('click', togglePopup);
 closePopupBtn.addEventListener('click', closePopup);
 
-        // Open the sidebar when the "Open Sidebar" button is clicked
         function openMenu() {
-            sideMenu.style.right = '0';
-            // content.style.marginLeft = '';
+            sideMenu.style.top = '0';
         };
-
-        // Close the sidebar when the close button is clicked
         function closeMenu() {
-          sideMenu.style.right = '-200px';
-            // content.style.marginLeft = '0';
+          sideMenu.style.top = '-200px';
         };
