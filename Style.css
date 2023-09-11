@@ -35,10 +35,6 @@ body::-webkit-scrollbar-thumb{
     background-position: center;
 }
 
-.header {
-    padding: 10px 5%;
-
-}
 
 nav .fas{
     display: none;
@@ -68,10 +64,11 @@ nav .name span {
     color: brown;
 }
 
+
 nav ul li {
-    display: inline-block;
+    display: inline-flex;
     list-style: none;
-    margin: 10px 8px;
+    padding: 13px;
 }
 
 nav ul li a {
@@ -91,15 +88,17 @@ nav ul li a:hover {
 }
 
 .content {
-    margin-top: 10vh;
-    display: flex;
     position: relative;
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 .text {
-    margin-top: 15%;
-    font-size: 2vw;
+    flex: 1;
+    font-size: 2em;
+    margin-top: 20vh;
 }
 
 .text h1 {
@@ -114,9 +113,9 @@ nav ul li a:hover {
 .img {
     background-color: rgb(30, 29, 29);
     border-radius: 50%;
-    height: 450px;
+    height: 450px; 
     width: 450px;
-    margin-top: 30px;
+    margin-top: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,15 +127,13 @@ nav ul li a:hover {
 #myimg {
     max-width: 100%;
     max-height: 100%;
-    width: auto;
     height: auto;
-    display: block;
+    display:block;
     transform: scale(2);
     position: absolute;
-    top: 25vh;
+    top: 20vh;
     left: 6vw;
 }
-
 
 /* -------about------- */
 .about {
@@ -153,6 +150,7 @@ nav ul li a:hover {
     height: 70%;
     width: 70%;
     text-align: center;
+    padding: 20px;
 }
 
 .container h1 {
@@ -164,17 +162,18 @@ nav ul li a:hover {
 .container p {
     font-size: 20px;
     font-weight: bolder;
+    padding: 10px 30px;
 }
 
 .container .tab {
     display: flex;
     margin: 2vw 0vw;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .container .tab .tab-link {
     margin-right: 3vw;
-    font-size: 2vw;
+    font-size: 2em;
     cursor: pointer;
     position: relative;
 }
@@ -230,12 +229,12 @@ nav ul li a:hover {
     text-align: left;
     list-style: none;
     margin: 2vh 0;
-    font-size: 1.4vw;
+    font-size: 1.2em;
 }
 
 .container .tab-content ul li span {
     color: brown;
-    font-size: 2vw;
+    font-size: 1.8em;
 }
 
 .container .tab-content {
@@ -284,7 +283,7 @@ nav ul li a:hover {
     font-weight: 300;
     text-align: left;
     border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
+    transition: all ease-in-out 0.5s;
 }
 
 .servicesList div:hover {
@@ -298,15 +297,23 @@ nav ul li a:hover {
 }
 
 .servicesList div h2 {
-    font-size: 30px;
+    font-size: 3em;
     font-weight: 500;
     margin-bottom: 3vh;
 }
 
+.servicesList div p {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+
 .servicesList div a {
     text-decoration: none;
     color: #fff;
-    font-size: 12px;
+    font-size: 1em;
     margin-top: 4vh;
     display: inline-block;
 }
@@ -370,7 +377,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: end;
     text-align: center;
-    font-size: 1.4vw;
+    font-size: 1.4em;
     transition: height 0.5s;
 }
 
@@ -382,19 +389,19 @@ nav ul li a:hover {
 .layer a {
     color: brown;
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: 1em;
     line-height: 6vh;
     background: #fff;
     width: 40PX;
     height: 40px;
     border-radius: 50%;
-    align-items: center;
+    align-content: center;
     margin-bottom: 2vh;
 
 }
 
 .work:hover img {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .work:hover .layer {
@@ -417,18 +424,7 @@ nav ul li a:hover {
 
 .btn button i {
     color: #e5e5e5;
-    font-size: 20px;
-}
-
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
+    font-size: 2em;
 }
 
 .popup {
@@ -450,8 +446,8 @@ nav ul li a:hover {
 .close {
     position: absolute;
     color: #000;
-    font-size: 40px;
-    top: 8px;
+    font-size: 4em;
+    top: 0;
     right: 12px;
     cursor: pointer;
 }
@@ -459,6 +455,8 @@ nav ul li a:hover {
 .popup-content h2 {
     color: #000;
     text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
 
 }
 
